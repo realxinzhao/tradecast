@@ -10,7 +10,7 @@ dataproc.gtap(
 )
 }
 \arguments{
-\item{datadir}{path to data folder (default = "./inst/extdata/gtap/")}
+\item{gtapdatadir}{path to gtap data dir}
 }
 \value{
 Returns a dataframe (basedata.pricelink.margin.mtax) including margin and

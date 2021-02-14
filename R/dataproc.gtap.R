@@ -1,7 +1,8 @@
 
 #' dataproc.gtap
 #'
-#' @param datadir path to data folder (default = "./inst/extdata/gtap/")
+#' @param gtapdatadir path to gtap data dir
+#'
 #' @description  processes gtap raw data to get margin and tariff data for tradecast
 #' @return Returns a dataframe (basedata.pricelink.margin.mtax) including margin and
 #'         tariff, and also nonland cost  share.
@@ -9,19 +10,19 @@
 #' @export
 #' @author Xin Zhao 2021
 #'
-dataproc.gtap <- function(gtapdatadir = paste0(
-  system.file("extdata", package = "tradecast", mustWork = T), "/gtap/")){
+dataproc.gtap <- function(gtapdatadir = paste0(system.file("extdata", package = "tradecast", mustWork = T), "/gtap/")
+                          ){
 
 files <- list.files(path = gtapdatadir, pattern = ".csv$", ignore.case = T)
 gtap_bind <- function(gtapheader = "BI02"){
   lapply(files,function(file){
-    read.csv(paste0(gtapdatadir, file),header = F,
+    utils::read.csv(paste0(gtapdatadir, file),header = F,
              fill = T, col.names = c(1:6), na.strings = NA) %>%
       tibble::rowid_to_column("ID")  %>%
       dplyr::filter(grepl(pattern = "!Header:", X1)) %>%
       dplyr::transmute(ID, header = gsub("!Header:","", X1)) %>%
       dplyr::right_join(
-        read.csv(paste0(gtapdatadir, file),header = F,
+        utils::read.csv(paste0(gtapdatadir, file),header = F,
                  fill = T, col.names = c(1:6), na.strings = NA) %>%
           tibble::rowid_to_column("ID"), by = "ID"
       ) %>% arrange(ID) %>%
@@ -39,7 +40,7 @@ gtap_bind <- function(gtapheader = "BI02"){
 #nls share
 gtap_bind("SF01") %>%
   dplyr::mutate_if(is.factor, as.character)%>%
-  setNames(c("header", as.character(.[1, ])[2:(ncol(.)-1)], "year")) %>%
+  stats::setNames(c("header", as.character(.[1, ])[2:(ncol(.)-1)], "year")) %>%
   dplyr::filter(Value != "Value") -> gtap.SF01
 
 #unique(gtap.SF01$year)
@@ -84,7 +85,7 @@ expand.grid(region = region,
 #tariffs
 
 gtap_bind("BI02") %>%
-  setNames(c("header", "TRAD_COMM", "reg.exp", "reg.imp", "IMPVALUE", "Value","year")) %>%
+  stats::setNames(c("header", "TRAD_COMM", "reg.exp", "reg.imp", "IMPVALUE", "Value","year")) %>%
   dplyr::filter(Value != "Value") -> gtap.BI02
 
 gtap.BI02 %>%
