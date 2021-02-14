@@ -1,0 +1,23 @@
+Package: tradecast
+Type: Package
+Title: Hindcast framework for validating an Armington-based agricultural trade model
+Version: 0.1.0
+Author: Xin Zhao <xin.zhao@pnnl.gov>
+        Kate Calvin <katherine.calvin@pnnl.gov>
+Maintainer: Xin Zhao <xin.zhao@pnnl.gov>
+Description: This R package provides a model framework validation framework, with 
+    a focus on the agricultural trade modeling method used in GCAM. In particular,
+    it includes scripts for running a small-scale agricultural trade-focused partical 
+    equilibrium model in R, and provides functions to optimize parameters and validate 
+    the model against historical data. The package also documents the model used in 
+    paper "The role of global agricultural market integration in multiregional 
+    economic modeling: using hindcast experiments to validate an Armington model."
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0)
+RoxygenNote: 7.1.1
+Imports:
+    dplyr (>= 0.8.5),
+    tidyr (>= 0.6.0),
+    tibble (>= 1.1)

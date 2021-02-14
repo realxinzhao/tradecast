@@ -1,0 +1,287 @@
+# File: AGLU_ctry.csv,,,,
+# Title: Mapping of countries in AGLU databases to ISO codes,,,,
+# Units: NA,,,,
+# Column types: cccciccciccc,,,,
+# ----------,,,,
+FAO_country,iso,GCAM_region_ID,GCAM_region,region
+Afghanistan,afg,27,South Asia,S.Asia
+Albania,alb,15,Europe_Non_EU,NEU
+Algeria,dza,3,Africa_Northern,N.AFR
+American Samoa,asm,29,Southeast Asia,S.E.Asia
+Andorra,and,13,EU-15,EU15
+Angola,ago,4,Africa_Southern,S.AFR
+Anguilla,aia,9,Central America and Caribbean,C.Amer.
+Antigua and Barbuda,atg,9,Central America and Caribbean,C.Amer.
+Argentina,arg,31,Argentina,Argentina
+Armenia,arm,10,Central Asia,C.Asia
+Aruba,abw,9,Central America and Caribbean,C.Amer.
+Australia,aus,6,Australia_NZ,Australia
+Austria,aut,13,EU-15,EU15
+Azerbaijan,aze,10,Central Asia,C.Asia
+Bahamas,bhs,9,Central America and Caribbean,C.Amer.
+Bahrain,bhr,21,Middle East,Middle East
+Bangladesh,bgd,27,South Asia,S.Asia
+Barbados,brb,9,Central America and Caribbean,C.Amer.
+Belarus,blr,14,Europe_Eastern,E.EUP
+Belgium,bel,13,EU-15,EU15
+Belgium-Luxembourg,bel,13,EU-15,EU15
+Belize,blz,9,Central America and Caribbean,C.Amer.
+Benin,ben,5,Africa_Western,W.AFR
+Bermuda,bmu,9,Central America and Caribbean,C.Amer.
+Bhutan,btn,27,South Asia,S.Asia
+Bolivia (Plurinational State of),bol,26,South America_Southern,S.S.Amer.
+Bosnia and Herzegovina,bih,15,Europe_Non_EU,NEU
+Botswana,bwa,4,Africa_Southern,S.AFR
+Brazil,bra,7,Brazil,Brazil
+British Virgin Islands,vgb,13,EU-15,EU15
+Brunei,brn,29,Southeast Asia,S.E.Asia
+Brunei Darussalam,brn,29,Southeast Asia,S.E.Asia
+Bulgaria,bgr,12,EU-12,EU12
+Burkina Faso,bfa,5,Africa_Western,W.AFR
+Burundi,bdi,2,Africa_Eastern,E.AFR
+Cambodia,khm,29,Southeast Asia,S.E.Asia
+Cameroon,cmr,5,Africa_Western,W.AFR
+Canada,can,8,Canada,Canada
+Cabo Verde,cpv,5,Africa_Western,W.AFR
+Cape Verde,cpv,5,Africa_Western,W.AFR
+Cayman Islands,cym,9,Central America and Caribbean,C.Amer.
+Central African Republic,caf,5,Africa_Western,W.AFR
+Chad,tcd,5,Africa_Western,W.AFR
+Channel Islands,chi,13,EU-15,EU15
+Chile,chl,26,South America_Southern,S.S.Amer.
+China,chn,11,China,China
+"China, Hong Kong SAR",hkg,11,China,China
+"China, mainland",chn,11,China,China
+"China, Macao SAR",mac,11,China,China
+"China, Taiwan Province of",chn,11,China,China
+Christmas Island,cxr,29,Southeast Asia,S.E.Asia
+Cocos (Keeling) Islands,cck,29,Southeast Asia,S.E.Asia
+Colombia,col,32,Colombia,Colombia
+Comoros,com,2,Africa_Eastern,E.AFR
+Congo,cog,5,Africa_Western,W.AFR
+Cook Islands,cok,29,Southeast Asia,S.E.Asia
+Costa Rica,cri,9,Central America and Caribbean,C.Amer.
+Côte d'Ivoire,civ,5,Africa_Western,W.AFR
+Croatia,hrv,15,Europe_Non_EU,NEU
+Cuba,cub,9,Central America and Caribbean,C.Amer.
+Curacao,cuw,#N/A,#N/A,#N/A
+Cyprus,cyp,12,EU-12,EU12
+Czech Republic,cze,12,EU-12,EU12
+Czechia,cze,12,EU-12,EU12
+Czechoslovakia,cze,12,EU-12,EU12
+Czechoslovakia,svk,12,EU-12,EU12
+Democratic People's Republic of Korea,prk,29,Southeast Asia,S.E.Asia
+DRC,cod,5,Africa_Western,W.AFR
+Democratic Republic of the Congo,cod,5,Africa_Western,W.AFR
+Denmark,dnk,13,EU-15,EU15
+Djibouti,dji,2,Africa_Eastern,E.AFR
+Dominica,dma,9,Central America and Caribbean,C.Amer.
+Dominican Republic,dom,9,Central America and Caribbean,C.Amer.
+Ecuador,ecu,26,South America_Southern,S.S.Amer.
+Egypt,egy,3,Africa_Northern,N.AFR
+El Salvador,slv,9,Central America and Caribbean,C.Amer.
+Equatorial Guinea,gnq,5,Africa_Western,W.AFR
+Eritrea,eri,2,Africa_Eastern,E.AFR
+Estonia,est,12,EU-12,EU12
+Ethiopia,eth,2,Africa_Eastern,E.AFR
+Ethiopia PDR,eth,2,Africa_Eastern,E.AFR
+Falkland Islands (Malvinas),flk,13,EU-15,EU15
+Faroe Islands,fro,13,EU-15,EU15
+Fiji,fji,29,Southeast Asia,S.E.Asia
+Finland,fin,13,EU-15,EU15
+France,fra,13,EU-15,EU15
+French Guiana,guf,25,South America_Northern,N.S.Amer.
+French Polynesia,pyf,29,Southeast Asia,S.E.Asia
+Gabon,gab,5,Africa_Western,W.AFR
+The Gambia,gmb,5,Africa_Western,W.AFR
+Gambia,gmb,5,Africa_Western,W.AFR
+Georgia,geo,10,Central Asia,C.Asia
+Germany,deu,13,EU-15,EU15
+Ghana,gha,5,Africa_Western,W.AFR
+Gibraltar,gib,13,EU-15,EU15
+Greece,grc,13,EU-15,EU15
+Greenland,grl,13,EU-15,EU15
+Grenada,grd,9,Central America and Caribbean,C.Amer.
+Guadeloupe,glp,9,Central America and Caribbean,C.Amer.
+Guam,gum,29,Southeast Asia,S.E.Asia
+Guatemala,gtm,9,Central America and Caribbean,C.Amer.
+Guinea,gin,5,Africa_Western,W.AFR
+Guinea-Bissau,gnb,5,Africa_Western,W.AFR
+Guyana,guy,25,South America_Northern,N.S.Amer.
+Haiti,hti,9,Central America and Caribbean,C.Amer.
+Holy See,vat,13,EU-15,EU15
+Honduras,hnd,9,Central America and Caribbean,C.Amer.
+Hungary,hun,12,EU-12,EU12
+Iceland,isl,16,European Free Trade Association,EUP.FTA
+India,ind,17,India,India
+Indonesia,idn,18,Indonesia,Indonesia
+Iran (Islamic Republic of),irn,21,Middle East,Middle East
+Iraq,irq,21,Middle East,Middle East
+Ireland,irl,13,EU-15,EU15
+Isle of Man,imn,13,EU-15,EU15
+Israel,isr,21,Middle East,Middle East
+Italy,ita,13,EU-15,EU15
+Jamaica,jam,9,Central America and Caribbean,C.Amer.
+Japan,jpn,19,Japan,Japan
+Jordan,jor,21,Middle East,Middle East
+Kazakhstan,kaz,10,Central Asia,C.Asia
+Kenya,ken,2,Africa_Eastern,E.AFR
+Kiribati,kir,29,Southeast Asia,S.E.Asia
+Kosovo,xkx,#N/A,#N/A,#N/A
+Kuwait,kwt,21,Middle East,Middle East
+Kyrgyzstan,kgz,10,Central Asia,C.Asia
+Lao People's Democratic Republic,lao,29,Southeast Asia,S.E.Asia
+Latvia,lva,12,EU-12,EU12
+Lebanon,lbn,21,Middle East,Middle East
+Lesotho,lso,4,Africa_Southern,S.AFR
+Liberia,lbr,5,Africa_Western,W.AFR
+Libya,lby,3,Africa_Northern,N.AFR
+Liechtenstein,lie,16,European Free Trade Association,EUP.FTA
+Lithuania,ltu,12,EU-12,EU12
+Luxembourg,lux,13,EU-15,EU15
+Madagascar,mdg,2,Africa_Eastern,E.AFR
+Malawi,mwi,4,Africa_Southern,S.AFR
+Malaysia,mys,29,Southeast Asia,S.E.Asia
+Maldives,mdv,27,South Asia,S.Asia
+Mali,mli,5,Africa_Western,W.AFR
+Malta,mlt,12,EU-12,EU12
+Marshall Islands,mhl,29,Southeast Asia,S.E.Asia
+Martinique,mtq,9,Central America and Caribbean,C.Amer.
+Mauritania,mrt,5,Africa_Western,W.AFR
+Mauritius,mus,2,Africa_Eastern,E.AFR
+Mayotte,myt,29,Southeast Asia,S.E.Asia
+Mexico,mex,20,Mexico,Mexico
+Micronesia,fsm,29,Southeast Asia,S.E.Asia
+Micronesia (Federated States of),fsm,29,Southeast Asia,S.E.Asia
+Monaco,mco,13,EU-15,EU15
+Mongolia,mng,10,Central Asia,C.Asia
+Montenegro,mne,15,Europe_Non_EU,NEU
+Montserrat,msr,9,Central America and Caribbean,C.Amer.
+Morocco,mar,3,Africa_Northern,N.AFR
+Mozambique,moz,4,Africa_Southern,S.AFR
+Myanmar,mmr,29,Southeast Asia,S.E.Asia
+Namibia,nam,4,Africa_Southern,S.AFR
+Nauru,nru,29,Southeast Asia,S.E.Asia
+Nepal,npl,27,South Asia,S.Asia
+Netherlands,nld,13,EU-15,EU15
+Netherlands Antilles,ant,9,Central America and Caribbean,C.Amer.
+Netherlands Antilles (former),ant,9,Central America and Caribbean,C.Amer.
+New Caledonia,ncl,29,Southeast Asia,S.E.Asia
+New Zealand,nzl,6,Australia_NZ,Australia
+Nicaragua,nic,9,Central America and Caribbean,C.Amer.
+Niger,ner,5,Africa_Western,W.AFR
+Nigeria,nga,5,Africa_Western,W.AFR
+Niue,niu,29,Southeast Asia,S.E.Asia
+Norfolk Island,nfk,29,Southeast Asia,S.E.Asia
+Northern Mariana Islands,mnp,29,Southeast Asia,S.E.Asia
+Norway,nor,16,European Free Trade Association,EUP.FTA
+Gaza Strip,pse,21,Middle East,Middle East
+West Bank,pse,21,Middle East,Middle East
+Occupied Palestinian Territory,pse,21,Middle East,Middle East
+Oman,omn,21,Middle East,Middle East
+Pacific Islands Trust Territory,fsm,29,Southeast Asia,S.E.Asia
+Pakistan,pak,22,Pakistan,Pakistan
+Palau,plw,29,Southeast Asia,S.E.Asia
+Panama,pan,9,Central America and Caribbean,C.Amer.
+Papua New Guinea,png,29,Southeast Asia,S.E.Asia
+Paraguay,pry,26,South America_Southern,S.S.Amer.
+Peru,per,26,South America_Southern,S.S.Amer.
+Philippines,phl,29,Southeast Asia,S.E.Asia
+Pitcairn Islands,pcn,29,Southeast Asia,S.E.Asia
+Poland,pol,12,EU-12,EU12
+Portugal,prt,13,EU-15,EU15
+Puerto Rico,pri,1,USA,USA
+Qatar,qat,21,Middle East,Middle East
+South Korea,kor,28,South Korea,S.Korea
+Republic of Korea,kor,28,South Korea,S.Korea
+Republic of Moldova,mda,14,Europe_Eastern,E.EUP
+Réunion,reu,2,Africa_Eastern,E.AFR
+Romania,rom,12,EU-12,EU12
+Russian Federation,rus,23,Russia,Russia
+Rwanda,rwa,2,Africa_Eastern,E.AFR
+Saint Helena,shn,13,EU-15,EU15
+Saint Kitts and Nevis,kna,9,Central America and Caribbean,C.Amer.
+Saint Lucia,lca,9,Central America and Caribbean,C.Amer.
+Saint Pierre and Miquelon,spm,13,EU-15,EU15
+Saint Vincent and the Grenadines,vct,9,Central America and Caribbean,C.Amer.
+Samoa,wsm,29,Southeast Asia,S.E.Asia
+San Marino,smr,13,EU-15,EU15
+Sao Tome and Principe,stp,5,Africa_Western,W.AFR
+Saudi Arabia,sau,21,Middle East,Middle East
+Senegal,sen,5,Africa_Western,W.AFR
+Serbia,srb,15,Europe_Non_EU,NEU
+Serbia and Montenegro,scg,15,Europe_Non_EU,NEU
+Serbia and Montenegro,scg,15,Europe_Non_EU,NEU
+Serbia and Montenegro,scg,15,Europe_Non_EU,NEU
+Seychelles,syc,29,Southeast Asia,S.E.Asia
+Sierra Leone,sle,5,Africa_Western,W.AFR
+Singapore,sgp,29,Southeast Asia,S.E.Asia
+Sint Maarten (Dutch Part),sxm,#N/A,#N/A,#N/A
+Slovakia,svk,12,EU-12,EU12
+Slovenia,svn,12,EU-12,EU12
+Solomon Islands,slb,29,Southeast Asia,S.E.Asia
+Somalia,som,2,Africa_Eastern,E.AFR
+South Africa,zaf,24,South Africa,South Africa
+South Sudan,ssd,2,Africa_Eastern,E.AFR
+Spain,esp,13,EU-15,EU15
+Sri Lanka,lka,27,South Asia,S.Asia
+Sudan,sdn,2,Africa_Eastern,E.AFR
+Sudan (former),sdn,2,Africa_Eastern,E.AFR
+Suriname,sur,25,South America_Northern,N.S.Amer.
+Svalbard and Jan Mayen Islands,sjm,16,European Free Trade Association,EUP.FTA
+Swaziland,swz,4,Africa_Southern,S.AFR
+Sweden,swe,13,EU-15,EU15
+Switzerland,che,16,European Free Trade Association,EUP.FTA
+Syrian Arab Republic,syr,21,Middle East,Middle East
+Taiwan,twn,30,Taiwan,Taiwan
+Tajikistan,tjk,10,Central Asia,C.Asia
+Thailand,tha,29,Southeast Asia,S.E.Asia
+The former Yugoslav Republic of Macedonia,mkd,15,Europe_Non_EU,NEU
+Timor-Leste,tls,29,Southeast Asia,S.E.Asia
+Togo,tgo,5,Africa_Western,W.AFR
+Tokelau,tkl,29,Southeast Asia,S.E.Asia
+Tonga,ton,29,Southeast Asia,S.E.Asia
+Trinidad and Tobago,tto,9,Central America and Caribbean,C.Amer.
+Tunisia,tun,3,Africa_Northern,N.AFR
+Turkey,tur,15,Europe_Non_EU,NEU
+Turkmenistan,tkm,10,Central Asia,C.Asia
+Turks and Caicos Islands,tca,13,EU-15,EU15
+Tuvalu,tuv,29,Southeast Asia,S.E.Asia
+Uganda,uga,2,Africa_Eastern,E.AFR
+Ukraine,ukr,14,Europe_Eastern,E.EUP
+United Arab Emirates,are,21,Middle East,Middle East
+United Kingdom,gbr,13,EU-15,EU15
+United Republic of Tanzania,tza,4,Africa_Southern,S.AFR
+United States of America,usa,1,USA,USA
+United States Virgin Islands,vir,1,USA,USA
+Uruguay,ury,26,South America_Southern,S.S.Amer.
+USSR,arm,10,Central Asia,C.Asia
+USSR,aze,10,Central Asia,C.Asia
+USSR,blr,14,Europe_Eastern,E.EUP
+USSR,est,12,EU-12,EU12
+USSR,geo,10,Central Asia,C.Asia
+USSR,kaz,10,Central Asia,C.Asia
+USSR,kgz,10,Central Asia,C.Asia
+USSR,ltu,12,EU-12,EU12
+USSR,lva,12,EU-12,EU12
+USSR,mda,14,Europe_Eastern,E.EUP
+USSR,rus,23,Russia,Russia
+USSR,tjk,10,Central Asia,C.Asia
+USSR,tkm,10,Central Asia,C.Asia
+USSR,ukr,14,Europe_Eastern,E.EUP
+USSR,uzb,10,Central Asia,C.Asia
+Uzbekistan,uzb,10,Central Asia,C.Asia
+Vanuatu,vut,29,Southeast Asia,S.E.Asia
+Venezuela (Bolivarian Republic of),ven,25,South America_Northern,N.S.Amer.
+Viet Nam,vnm,29,Southeast Asia,S.E.Asia
+Wallis and Futuna Islands,wlf,13,EU-15,EU15
+Western Sahara,esh,3,Africa_Northern,N.AFR
+Yemen,yem,21,Middle East,Middle East
+Yugoslav SFR,bih,15,Europe_Non_EU,NEU
+Yugoslav SFR,hrv,15,Europe_Non_EU,NEU
+Yugoslav SFR,mkd,15,Europe_Non_EU,NEU
+Yugoslav SFR,mne,15,Europe_Non_EU,NEU
+Yugoslav SFR,srb,15,Europe_Non_EU,NEU
+Yugoslav SFR,svn,12,EU-12,EU12
+Zambia,zmb,4,Africa_Southern,S.AFR
+Zimbabwe,zwe,4,Africa_Southern,S.AFR
