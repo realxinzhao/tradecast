@@ -41,6 +41,11 @@ SET <- list(
     SET_REG  = c("Africa", "Asia", "Europe", "N. America", "Oceania", "S. America") )
 
 
+ces.demand = 1
+logit.landsupply = -1
+logit.Armington.reg = 3
+logit.Armington.intl = 6
+
 
 # * Crop groupings for expectations. gcamland has the option of differentiating expectation
 # * parameters by crop. We do this in three groups, with the crops belonging to each group specified here.

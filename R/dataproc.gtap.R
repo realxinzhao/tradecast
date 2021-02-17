@@ -1,9 +1,7 @@
 
 #' dataproc.gtap
-#'
-#' @param gtapdatadir path to gtap data dir
-#'
 #' @description  processes gtap raw data to get margin and tariff data for tradecast
+#' @param gtapdatadir path to gtap data dir
 #' @return Returns a dataframe (basedata.pricelink.margin.mtax) including margin and
 #'         tariff, and also nonland cost  share.
 #' @import dplyr tidyr
@@ -119,7 +117,7 @@ expand.grid(reg.exp = region, reg.imp = region,
 rm(list = ls(pattern = "gtap*"))
 #-----------------------------
 
-return(list(basedata.nlc, basedata.pricelink.margin.mtax))
+return(list(basedata.nlc = basedata.nlc, basedata.pricelink.margin.mtax = basedata.pricelink.margin.mtax))
 }
 
 
