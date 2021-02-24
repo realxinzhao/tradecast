@@ -120,10 +120,21 @@ dataproc.basedata <- function(){
     tidyr::gather("variable","value", -c(reg.exp, reg.imp, crop, year)) ->
     basedata.pricelink.allyear
 
+  (1:length(unique(basedata.regmkt.allyear$reg))) -> regID
+  names(regID) <- unique(basedata.regmkt.allyear$reg)
+  (1:length(unique(basedata.regmkt.allyear$crop))) -> sectorID
+  names(sectorID) <- unique(basedata.regmkt.allyear$crop)
+  as.character(unique(basedata.regmkt.allyear$variable)) -> vars
+
+  baseyear <- unique(basedata.regmkt.allyear$year)
+
   return(list(
     basedata.regmkt.allyear = basedata.regmkt.allyear,
     basedata.trade.allyear = basedata.trade.allyear,
-    basedata.pricelink.allyear = basedata.pricelink.allyear))
+    basedata.pricelink.allyear = basedata.pricelink.allyear,
+    baseyear = baseyear,
+    regID = regID,
+    sectorID = sectorID))
 
 }
 
@@ -138,8 +149,8 @@ dataproc.basedata <- function(){
 
 #' basedata.year
 #'
-#' @param year data of a numeric year
-#' @param basedata.allyear results from dataproc.basedata()
+#' @param ayear data of a numeric year
+#' @param abasedata.allyear results from dataproc.basedata()
 #'
 #' @return A list of base data in a year: basedata.regmkt, basedata.trade, basedata.pricelink
 #' @export
@@ -149,15 +160,23 @@ basedata.year <- function(ayear, abasedata.allyear){
   #*********************************************************#
   #Filter out data for a single year
   lapply(names(abasedata.allyear), function(dataset){
-    abasedata.allyear[[dataset]] %>%
+    if (grepl("^basedata.*allyear$", dataset)) {
+      abasedata.allyear[[dataset]] %>%
       filter(year %in% c(ayear)) %>%
       within(rm(year))
+    } else{
+      abasedata.allyear[[dataset]]
+    }
   }) -> abasedata.year
 
   names(abasedata.year) <- gsub(".allyear", "" , names(abasedata.allyear))
+  abasedata.year[["baseyear"]] <- ayear
+
   return(abasedata.year)
 
 }
+
+
 
 
 

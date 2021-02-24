@@ -7,9 +7,9 @@
 basedata.year(ayear, abasedata.allyear)
 }
 \arguments{
-\item{year}{data of a numeric year}
+\item{ayear}{data of a numeric year}
 
-\item{basedata.allyear}{results from dataproc.basedata()}
+\item{abasedata.allyear}{results from dataproc.basedata()}
 }
 \value{
 A list of base data in a year: basedata.regmkt, basedata.trade, basedata.pricelink

@@ -4,15 +4,15 @@
 \alias{HISTDATA}
 \title{HISTDATA}
 \usage{
-HISTDATA(hist.year = CALIBRATION_YEAR, basedata.allyear)
+HISTDATA(hist.years = CALIBRATION_YEAR, abasedata.allyear)
 }
 \arguments{
-\item{hist.year}{A numeric value of a historical year; CALIBRATION_YEAR is used by default}
+\item{hist.years}{A numeric value of a historical year; CALIBRATION_YEAR is used by default}
 
-\item{basedata.allyear}{results from dataproc.basedata()}
+\item{abasedata.allyear}{results from dataproc.basedata()}
 }
 \value{
-A list of data including parameters and data
+A list of data including parameters and data across hist.years
 }
 \description{
 Making use of the processed data to balance base year equilibrium and return essential data needed for initializing and verifying the model.

@@ -4,30 +4,42 @@
 #' HISTDATA
 #' @description Making use of the processed data to balance base year equilibrium and return essential data needed for initializing and verifying the model.
 #'
-#' @param basedata.allyear results from dataproc.basedata()
-#' @param hist.year A numeric value of a historical year; CALIBRATION_YEAR is used by default
+#' @param abasedata.allyear results from dataproc.basedata()
+#' @param hist.years A numeric value of a historical year; CALIBRATION_YEAR is used by default
 #'
 #' @import dplyr
-#' @return A list of data including parameters and data
+#' @return A list of data including parameters and data across hist.years
 #' @export
 
-HISTDATA <- function(hist.year = CALIBRATION_YEAR, abasedata.allyear){
+HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
+
+  #*********************************************************#
+  #*Check variables inputs
+  if (!all(hist.years %in% abasedata.allyear$baseyear)) {
+    stop(paste0("hist.years must be a subset of years in data:", abasedata.allyear$baseyear))
+  }
+
+
+
+
+  abasedata.allyear$regID -> regID
+  abasedata.allyear$sectorID -> sectorID
+
+  #*********************************************************#
+  #*Apply to all hist.years
+  lapply(hist.years, function(ayear){
 
 
   #*********************************************************#
-  #base year data for calibration and/or results comparison
-  basedata.year(hist.year, abasedata.allyear) -> BD
+  #historical year for ayear data for calibration and/or results comparison
+  basedata.year(ayear, abasedata.allyear) -> BD
 
   #Note that margin.reg.data.name need to be defined for data sensitivity analysis
   #"margin.reg.pim_pexp.mtax.shock" is used now
 
   #*********************************************************#
-  #*Data
+  #*Data for a year
 
-  (1:length(unique(BD$basedata.regmkt$reg))) -> regID
-  names(regID) <- unique(BD$basedata.regmkt$reg)
-  (1:length(unique(BD$basedata.regmkt$crop))) -> sectorID
-  names(sectorID) <- unique(BD$basedata.regmkt$crop)
   as.character(unique(BD$basedata.regmkt$variable)) -> vars
 
   lapply(vars, function(var){
@@ -176,41 +188,17 @@ HISTDATA <- function(hist.year = CALIBRATION_YEAR, abasedata.allyear){
       regID = regID,
       sectorID = sectorID),
 
-    year = hist.year
+    year = ayear
 
   ))
 
   #*********************************************************#
-
-}
-
-
-
-
-
-#' HISTDATA_ALL
-#'
-#' @param allyear A vector of all study years
-#'
-#' @return all_data, which was a list of HISTDATA() for each year
-#' @export
-
-HISTDATA_ALL <- function(allyear){
-
-
-  #*********************************************************#
-  basedata.allyear <- dataproc.basedata()
-
-  lapply(allyear, function(year){
-    HISTDATA(hist.year = year, abasedata.allyear = basedata.allyear)
   } ) -> all_data
-
-  names(all_data) <- allyear
-
+    names(all_data) <- hist.years
   #*********************************************************#
   return(all_data) #return data
-
 }
+
 
 
 
