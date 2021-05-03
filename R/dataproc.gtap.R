@@ -10,6 +10,10 @@
 #'
 dataproc.gtap <- function(gtapdatadir = paste0(system.file("extdata", package = "tradecast", mustWork = T), "/gtap/")
                           ){
+  # Silence package checks
+  DEMD_COMM <- ID <- IMPVALUE <- PROD_COMM <- REG <- TRAD_COMM <- Value <- X1 <- header <- . <-
+    impcost <- mtax <- reg.exp <- reg.imp <- value <- variable <- year <- NULL
+
 
 files <- list.files(path = gtapdatadir, pattern = ".csv$", ignore.case = T)
 gtap_bind <- function(gtapheader = "BI02"){
@@ -74,7 +78,7 @@ expand.grid(region = region,
   dplyr::left_join(data.frame(study.year, gtap.year), by = "study.year") %>%
   dplyr::left_join(data.frame(crop_agg, gtap.crop), by = "crop_agg") %>%
   dplyr::left_join(data.frame(region, gtap.reg), by = "region") %>%
-  dplyr::left_join(gtap.nlc.share, by = c("gtap.year", "gtap.crop")) %>%
+  dplyr::left_join(gtap.nlc.share, by = c("gtap.year", "gtap.crop", "gtap.reg" = "reg")) %>%
   dplyr::transmute(reg = region, crop = crop_agg, year = study.year,
                    variable, value) ->
   basedata.nlc

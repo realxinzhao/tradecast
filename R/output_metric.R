@@ -1,16 +1,19 @@
 
 
+#' output_metric
+#' @description Computes goodness-of-fit based on the output database
 
-#' output.metric
-#'
-#' @param aupdated.db.equil processed output database from output.prod (updated.db.equil)
-#'
-#' @return
+#' @param DF processed output database from hindcast experiment
+#' @return The value of targeted error metric
 #' @export
 
-output.metric <- function(aupdated.db.equil){
+output_metric <- function(DF){
 
-  aupdated.db.equil %>% gather(equil,"value", c(consumption, price)) %>%
+  # Silence package checks
+  Err <- consumption <- crop <- equil <- est <- logdiff <- logdist <- obs <- price <- reg.exp <-
+  reg.imp <- scenario <- target.yr <- value <- variable <- weight <- wmean.logdist.logw <- NULL
+
+  DF %>% gather(equil,"value", c(consumption, price)) %>%
     filter(!(reg.imp == reg.exp & variable == "export")) %>%
     spread(scenario, value) %>%
     transmute(reg.imp, reg.exp, crop, variable, target.yr, equil, logdiff = (log(est / obs))^2) %>%
@@ -19,7 +22,7 @@ output.metric <- function(aupdated.db.equil){
            #, is.finite(price)
     ) %>%
     mutate(logdist = (consumption + price)) %>%
-    left_join(aupdated.db.equil %>% filter(scenario == "obs") %>%
+    left_join(DF %>% filter(scenario == "obs") %>%
                 within(rm(scenario, price)) %>% rename(weight = consumption),
               by = c("reg.imp", "reg.exp", "crop", "variable", "target.yr")) %>%
     group_by(target.yr) %>%

@@ -1,23 +1,23 @@
 
-#' model.shock.config
+#' model_shock_S3
 #'
-#' @description generate a list model.shock.config of model drivers in global env.
-#'
-#' @param base.yr A numeric value of base year
-#' @param target.yr A numeric value of target year to calculate shocks or targeted exogenous variables
-#' @param aHISTDATA list of all data, returned from HISTDATA()
+#' @description Translate MODEL.DATA to model language of configuration info,
+#'              e.g., parameters and shocks. Sourcing fn.demand.regl.sw from target
+#' @param BASEYEAR A numeric value of base year
+#' @param TARGETYEAR A numeric value of target year to calculate shocks or targeted exogenous variables
+#' @param MODEL.DATA list of all data, returned from MODEL.DATA()
 #'
 #' @return A list of exogenous variable and parameters to be used in model solving
 #' @export
 
-model.shock.config <- function(base.yr = 1995,
-                               target.yr = 2015,
-                               aHISTDATA){
+model_shock_S3 <- function(BASEYEAR = 1995,
+                        TARGETYEAR = 2015,
+                        MODEL.DATA){
 
   #*********************************************************#
-  #*Parsing data based on aHISTDATA
-  aHISTDATA[[as.character(base.yr)]] -> base
-  aHISTDATA[[as.character(target.yr)]] -> target
+  #*Parsing data based on MODEL.DATA
+  MODEL.DATA[[as.character(BASEYEAR)]] -> base
+  MODEL.DATA[[as.character(TARGETYEAR)]] -> target
 
 
   model.shock.config <- list(
@@ -35,8 +35,8 @@ model.shock.config <- function(base.yr = 1995,
   #*Setting parameters to those calibrated to base year data
 
     #Armington parameters: regional (micro)
-    fn.logit.exponent.regl = base$parameter.exponent$logit.exponent.regl,
-    fn.demand.regl.sw = base$parameter.sw$demand.regl.sw,
+    fn.logit.exponent.regl = target$parameter.exponent$logit.exponent.regl, #targeted here
+    fn.demand.regl.sw = target$parameter.sw$demand.regl.sw,                 #targeted here
 
     #Armignton parameters: international (macro)
     fn.logit.exponent.intl = base$parameter.exponent$logit.exponent.intl,
@@ -54,14 +54,10 @@ model.shock.config <- function(base.yr = 1995,
   #*********************************************************#
   #*including Sets and target.year
     sets = base$sets,
-    Year = target.yr
+    Year = TARGETYEAR
   )
 
   #*********************************************************#
-  # assign("model.shock.config",
-  #        model.shock.config,
-  #        envir = .GlobalEnv)
-
   return(model.shock.config)
 
   #*********************************************************#
@@ -75,6 +71,5 @@ model.shock.config <- function(base.yr = 1995,
   # }) })
 
 }
-
 
 

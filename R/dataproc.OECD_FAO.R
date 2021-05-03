@@ -14,6 +14,10 @@
 cropbioshare <- function(oecddatadir = paste0(system.file("extdata", package = "tradecast", mustWork = T), "/OECD_FAO/")
                          ){
 
+  # Silence package checks
+  Time <- Country <- Commodity <- Variable <- Value <- reg <- variable <- region <- year <-
+    value <- crop1 <- Production <- Imports <- Exports <- `Biofuel use` <- crop.consumption <-
+    Crush <- bioshare.oil <- bioshare <- bioshare.seed <- biocrop <- NULL
 
 files <- list.files(path = oecddatadir, pattern = ".csv$", ignore.case = T)
 

@@ -10,6 +10,9 @@
 
 
 pull_list <- function(.df, group = "reg", val.rm = c("variable", "crop")){
+  # Silence package checks
+  value <- NULL
+
   .df %>% dplyr::group_by_at(vars(one_of(c(group, val.rm)))) %>%
     dplyr::summarize(value = sum(value), .groups = 'drop') %>%  #, .groups = 'drop'
     dplyr::ungroup() %>%

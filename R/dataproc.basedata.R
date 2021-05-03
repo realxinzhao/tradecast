@@ -1,5 +1,5 @@
 
-#' BASEDATA
+#' dataproc_basedata
 #' @description  processes source data to generate basedata
 #' @import dplyr tidyr
 #' @return a list of basedata.regmkt.allyear, basedata.trade.allyear, and basedata.pricelink.allyear
@@ -7,7 +7,13 @@
 #' @author Xin Zhao 2021
 
 
-dataproc.basedata <- function(){
+dataproc_basedata <- function(){
+
+  # Silence package checks
+
+  . <- H.area <- Item <- area <- consume.dom <- crop <- exp.Q <- exp.V <- imp.Q <- imp.V <-
+  margin.mtax <- margin.reg.pim_pexp <- margin.reg.pim_pp <- pexp.reg <- pimp.reg <-
+  pp <-reg <- reg.exp <- reg.imp <- region <- revenue <- value <- variable <- year <- NULL
 
   TradeGCAM <- readRDS(paste0(system.file("extdata", package = "tradecast", mustWork = T),
                               "/RDS/TradeGCAMmini.rds"))
@@ -140,39 +146,34 @@ dataproc.basedata <- function(){
 
 
 
-
-
-
-
-
-
-
-#' basedata.year
+#' basedata_year
 #'
-#' @param ayear data of a numeric year
-#' @param abasedata.allyear results from dataproc.basedata()
+#' @param YEAR data of a numeric year
+#' @param BASEDATA.ALLYEARS results from dataproc_basedata()
 #'
 #' @return A list of base data in a year: basedata.regmkt, basedata.trade, basedata.pricelink
 #' @export
 
-basedata.year <- function(ayear, abasedata.allyear){
+basedata_year <- function(YEAR, BASEDATA.ALLYEARS){
+  # Silence package checks
+  year <- NULL
 
   #*********************************************************#
   #Filter out data for a single year
-  lapply(names(abasedata.allyear), function(dataset){
+  lapply(names(BASEDATA.ALLYEARS), function(dataset){
     if (grepl("^basedata.*allyear$", dataset)) {
-      abasedata.allyear[[dataset]] %>%
-      filter(year %in% c(ayear)) %>%
+      BASEDATA.ALLYEARS[[dataset]] %>%
+      filter(year %in% c(YEAR)) %>%
       within(rm(year))
     } else{
-      abasedata.allyear[[dataset]]
+      BASEDATA.ALLYEARS[[dataset]]
     }
-  }) -> abasedata.year
+  }) -> basedata.year
 
-  names(abasedata.year) <- gsub(".allyear", "" , names(abasedata.allyear))
-  abasedata.year[["baseyear"]] <- ayear
+  names(basedata.year) <- gsub(".allyear", "" , names(BASEDATA.ALLYEARS))
+  BASEDATA.ALLYEARS[["baseyear"]] <- YEAR
 
-  return(abasedata.year)
+  return(basedata.year)
 
 }
 

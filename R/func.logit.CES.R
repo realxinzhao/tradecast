@@ -14,6 +14,10 @@
 #' @export
 
 logit.sw.cali <- function(q, p, logit.exponent, sw_relative = "sw_share"){
+
+  # Silence package checks
+  sw <- ID <- NULL
+
   if( length(q[!is.na(q)]) < 2 ) {
     stop( "argument 'q' must include at least 2 non NA rows" )
   } else if (is.null(logit.exponent)) {

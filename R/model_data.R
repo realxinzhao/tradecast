@@ -1,38 +1,44 @@
 
 
 
-#' HISTDATA
+#' model.data
 #' @description Making use of the processed data to balance base year equilibrium and return essential data needed for initializing and verifying the model.
 #'
-#' @param abasedata.allyear results from dataproc.basedata()
-#' @param hist.years A numeric value of a historical year; CALIBRATION_YEAR is used by default
+#' @param BASEDATA.ALLYEARS Results from dataproc.basedata()
+#' @param HIST.YEARS A numeric value of a historical year; CALIBRATION_YEAR is used by default
+#' @param PARAMETER.EXPONENT A list of parameters used in initial calibration (e.g., CES and logit exponents)
 #'
 #' @import dplyr
-#' @return A list of data including parameters and data across hist.years
+#' @return A list of data including parameters and data across HIST.YEARS
 #' @export
 
-HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
+model_data <- function(HIST.YEARS = CALIBRATION_YEAR,
+                       BASEDATA.ALLYEARS,
+                       PARAMETER.EXPONENT){
+  # Silence package checks
+  area <- bioshare <- nlc.share <- pp <- reg.exp <- variable <- yield <- NULL
+
 
   #*********************************************************#
   #*Check variables inputs
-  if (!all(hist.years %in% abasedata.allyear$baseyear)) {
-    stop(paste0("hist.years must be a subset of years in data:", abasedata.allyear$baseyear))
+  if (!all(HIST.YEARS %in% BASEDATA.ALLYEARS$baseyear)) {
+    stop(paste0("HIST.YEARS must be a subset of years in data: ",
+                paste(BASEDATA.ALLYEARS$baseyear, collapse = ",")))
   }
 
 
+  BASEDATA.ALLYEARS$regID -> regID
+  BASEDATA.ALLYEARS$sectorID -> sectorID
 
-
-  abasedata.allyear$regID -> regID
-  abasedata.allyear$sectorID -> sectorID
 
   #*********************************************************#
-  #*Apply to all hist.years
-  lapply(hist.years, function(ayear){
+  #*Apply to all HIST.YEARS
+  lapply(HIST.YEARS, function(ayear){
 
 
   #*********************************************************#
   #historical year for ayear data for calibration and/or results comparison
-  basedata.year(ayear, abasedata.allyear) -> BD
+  basedata_year(ayear, BASEDATA.ALLYEARS) -> BD
 
   #Note that margin.reg.data.name need to be defined for data sensitivity analysis
   #"margin.reg.pim_pexp.mtax.shock" is used now
@@ -112,14 +118,15 @@ HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
   expense <- lapply(regID, function(reg){sum(pc[[reg]] * consume[[reg]] ) } )
 
 
+
   #*********************************************************#
   #* PARAMETERS & CALIBRATION
 
   #read and parse exponents
-  ces.exponent.demand <- ces.demand
-  logit.exponent.land <- logit.landsupply
-  logit.exponent.regl <- lapply(sectorID, function(crop){logit.Armington.reg})
-  logit.exponent.intl <- lapply(sectorID, function(crop){logit.Armington.intl})
+  ces.exponent.demand <- PARAMETER.EXPONENT$ces.demand
+  logit.exponent.land <- PARAMETER.EXPONENT$logit.landsupply
+  logit.exponent.regl <- lapply(sectorID, function(crop){PARAMETER.EXPONENT$logit.Armington.reg})
+  logit.exponent.intl <- lapply(sectorID, function(crop){PARAMETER.EXPONENT$logit.Armington.intl})
 
   #Calibrating share-weights for area allocation
   land.sw <- lapply(regID, function(reg){logit.sw.cali(area[[reg]], rental[[reg]], logit.exponent.land)})
@@ -127,8 +134,8 @@ HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
   #Calibrating share-weights for CES utility
 
   demand.sw <- lapply(regID, function(reg){logit.sw.cali(consum.nobiof[[reg]], pc[[reg]], ces.exponent.demand)})
-  #Calibrating share-weights for regional Armington
 
+  #Calibrating share-weights for regional Armington
   demand.regl.sw <- lapply(regID, function(reg){
     lapply(sectorID, function(crop){
       logit.sw.cali(c(consume.dom[[reg]][[crop]], consume.imp[[reg]][[crop]]),
@@ -147,9 +154,9 @@ HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
   })
 
 
+
   #*********************************************************#
   #*Return a list of variables, parameters, and sets
-
   return(list(
     variable.exogenous = list(
       expense = expense,
@@ -174,7 +181,7 @@ HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
       ces.exponent.demand = ces.exponent.demand,
       logit.exponent.land = logit.exponent.land,
       logit.exponent.regl = logit.exponent.regl,
-      logit.exponent.intl =logit.exponent.intl
+      logit.exponent.intl = logit.exponent.intl
       ),
 
     parameter.sw = list(
@@ -194,7 +201,7 @@ HISTDATA <- function(hist.years = CALIBRATION_YEAR, abasedata.allyear){
 
   #*********************************************************#
   } ) -> all_data
-    names(all_data) <- hist.years
+    names(all_data) <- HIST.YEARS
   #*********************************************************#
   return(all_data) #return data
 }
