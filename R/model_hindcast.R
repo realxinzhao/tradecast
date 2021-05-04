@@ -6,6 +6,7 @@
 #' @param BASEYEAR A numeric value of base year
 #' @param TARGETYEARS A vector of target years
 #' @param BASEDATA.ALLYEARS The dataframe returned from dataproc.basedata
+#' @param LOG.WEIGHT if true using log(1+weight) as weight; otherwise weight^0.5 is used as weight in output_metric
 #'
 #' @return goodness-of-fit (GoF)
 #' @export
@@ -14,7 +15,8 @@ model_hindcast <- function(PARAMETER,
                            PARAMETER.EXPONENT,
                            BASEYEAR,
                            TARGETYEARS,
-                           BASEDATA.ALLYEARS){
+                           BASEDATA.ALLYEARS,
+                           LOG.WEIGHT = F){
 
 
   #*********************************************************#
@@ -42,7 +44,7 @@ model_hindcast <- function(PARAMETER,
 
   #*********************************************************#
   #*Evaluate results and return goodness-of-fit (GoF)
-  output_metric(DB.updated) -> GoF
+  output_metric(DF = DB.updated, LOG.WEIGHT = LOG.WEIGHT) -> GoF
   print(paste0("Parameters: ", paste(PARAMETER, collapse = ","), " SSE ", round(GoF,3)))
   return(GoF)
 

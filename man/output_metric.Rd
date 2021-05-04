@@ -4,10 +4,12 @@
 \alias{output_metric}
 \title{output_metric}
 \usage{
-output_metric(DF)
+output_metric(DF, LOG.WEIGHT = F)
 }
 \arguments{
 \item{DF}{processed output database from hindcast experiment}
+
+\item{LOG.WEIGHT}{if true using log(1+weight) as weight; otherwise weight^0.5 is used as weight}
 }
 \value{
 The value of targeted error metric

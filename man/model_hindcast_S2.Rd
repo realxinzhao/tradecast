@@ -9,7 +9,8 @@ model_hindcast_S2(
   PARAMETER.EXPONENT,
   BASEYEAR,
   TARGETYEARS,
-  BASEDATA.ALLYEARS
+  BASEDATA.ALLYEARS,
+  LOG.WEIGHT = F
 )
 }
 \arguments{
@@ -20,6 +21,8 @@ model_hindcast_S2(
 \item{TARGETYEARS}{A vector of target years}
 
 \item{BASEDATA.ALLYEARS}{The dataframe returned from dataproc.basedata}
+
+\item{LOG.WEIGHT}{if true using log(1+weight) as weight; otherwise weight^0.5 is used as weight in output_metric}
 }
 \value{
 goodness-of-fit (GoF)

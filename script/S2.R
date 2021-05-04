@@ -18,7 +18,8 @@ basedata.allyear <- dataproc_basedata()
 #                   PARAMETER.EXPONENT = parameter.exponent,
 #                   BASEYEAR = 1995,
 #                   TARGETYEARS = seq(2000, 2015,5),
-#                   BASEDATA.ALLYEARS = basedata.allyear)
+#                   BASEDATA.ALLYEARS = basedata.allyear,
+#                   LOG.WEIGHT = F)
 
 run_hindcast_optim(PAR.START = c(0.8418275, 1.4485546, c(1.1492747, 1.2005832, 1.2150673, 1.3696531)),
                    FUN = model_hindcast_S2,
