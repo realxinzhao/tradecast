@@ -10,7 +10,10 @@ parameter.exponent <- list(
   logit.landsupply = -1,
   logit.Armington.reg = 3,
   logit.Armington.intl = 6
+  #logit.Armington.reg = 0.8418275 ,
+  #logit.Armington.intl = 1.4485546
 )
+
 
 basedata.allyear <- dataproc_basedata()
 
@@ -24,9 +27,9 @@ output_metric(
                TARGETYEARS = seq(2000, 2015,5),
                MODEL.DATA = model.data,
                BASEDATA.ALLYEARS = basedata.allyear,
-               MODEL = minicam_agtrade) )->
+               MODEL = minicam_agtrade),
+  LOG.WEIGHT = F)->
   sol.out
-
 
 
 

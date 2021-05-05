@@ -3,7 +3,7 @@
 library(dplyr,lib.loc = "C:/Users/XZhaoPC/Documents/R/win-library/newer")
 library(tradecast)
 
-scenname = "S3"
+scenname = "S3_sens_weight"
 
 parameter.exponent <- list(
   ces.demand = 1,

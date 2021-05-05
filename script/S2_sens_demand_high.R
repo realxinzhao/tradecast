@@ -14,7 +14,7 @@ parameter.exponent <- list(
 
 basedata.allyear <- dataproc_basedata()
 
-run_hindcast_optim(PAR.START = c(0.8418275, 1.4485546, c(1.1492747, 1.2005832, 1.2150673, 1.3696531)),
+run_hindcast_optim(PAR.START = c(0.7917796, 1.4281488, 1.1480864, 1.2020111, 1.2130033, 1.3717513),
                    FUN = model_hindcast_S2,
                    PARAMETER.EXPONENT = parameter.exponent,
                    BASEYEAR = 1995,
@@ -23,7 +23,7 @@ run_hindcast_optim(PAR.START = c(0.8418275, 1.4485546, c(1.1492747, 1.2005832, 1
                    LOWER = c(0.1, 0.1, rep(0.4, 4)),
                    UPPER = c(3, 8, rep(4, 4)),
                    HESSIAN = T,
-                   MAXIT = 500, PGTOL = 0.0005) -> sol.out
+                   MAXIT = 1000, PGTOL = 0.00001) -> sol.out
 
 dof = (6^3 * 4  - length(sol.out[[1]]$par))
 sol.out$se = sqrt(diag(2*sol.out[[1]]$value / dof * solve(sol.out[[1]]$hessian)))
