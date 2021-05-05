@@ -11,7 +11,7 @@ minicam_agtrade(X, CONFIG, OUTPUT = F)
 
 \item{CONFIG}{The configuration generated from model.shock.config}
 
-\item{OUTPUT}{A logical variable: with default "T", other results are output}
+\item{OUTPUT}{A logical variable: with value "T", other results are output; "F" is required in solver}
 }
 \value{
 The slack variables (y) in system of equations

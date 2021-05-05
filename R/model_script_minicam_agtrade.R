@@ -4,7 +4,7 @@
 #' @description The model includes system of equations representing global agricultural markets.
 #'              There are currently 144 variable and 144 equations to solve.
 #' @param X price variables
-#' @param OUTPUT A logical variable: with default "T", other results are output
+#' @param OUTPUT A logical variable: with value "T", other results are output; "F" is required in solver
 #' @param CONFIG The configuration generated from model.shock.config
 #' @import dplyr
 #' @return The slack variables (y) in system of equations

@@ -7,6 +7,7 @@
 #' @param TARGETYEARS A vector of target years
 #' @param BASEDATA.ALLYEARS The dataframe returned from dataproc.basedata
 #' @param LOG.WEIGHT if true using log(1+weight) as weight; otherwise weight^0.5 is used as weight in output_metric
+#' @param DB.OUTPUT A logical variable: with value "T", output database is output; "F" is required in solver
 #'
 #' @return goodness-of-fit (GoF)
 #' @export
@@ -16,7 +17,8 @@ model_hindcast_S2 <- function(PARAMETER,
                               BASEYEAR,
                               TARGETYEARS,
                               BASEDATA.ALLYEARS,
-                              LOG.WEIGHT = F){
+                              LOG.WEIGHT = F,
+                              DB.OUTPUT = F){
 
 
   #*********************************************************#
@@ -64,7 +66,22 @@ model_hindcast_S2 <- function(PARAMETER,
   #*Evaluate results and return goodness-of-fit (GoF)
   output_metric(DF = DB.updated, LOG.WEIGHT = LOG.WEIGHT) -> GoF
   print(paste0("Parameters: ", paste(PARAMETER, collapse = ","), " SSE ", round(GoF,3)))
-  return(GoF)
+
+  #*********************************************************#
+  #return target(GoF) for minimizing or
+  #*return output database & GoF
+  if (OUTPUT == F) {
+    return(GoF)
+  } else
+    if (OUTPUT == T) {
+      return(
+        output = list(
+          outDB = DB.updated,
+          GoF = GoF,
+          LOG.WEIGHT = LOG.WEIGHT
+        )
+      )
+    }
 
 }
 

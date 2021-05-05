@@ -10,7 +10,8 @@ model_hindcast_S3(
   BASEYEAR,
   TARGETYEARS,
   BASEDATA.ALLYEARS,
-  LOG.WEIGHT = F
+  LOG.WEIGHT = F,
+  DB.OUTPUT = F
 )
 }
 \arguments{
@@ -23,6 +24,8 @@ model_hindcast_S3(
 \item{BASEDATA.ALLYEARS}{The dataframe returned from dataproc.basedata}
 
 \item{LOG.WEIGHT}{if true using log(1+weight) as weight; otherwise weight^0.5 is used as weight in output_metric}
+
+\item{DB.OUTPUT}{A logical variable: with value "T", output database is output; "F" is required in solver}
 }
 \value{
 goodness-of-fit (GoF)
