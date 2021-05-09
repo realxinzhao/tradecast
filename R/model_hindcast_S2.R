@@ -70,10 +70,10 @@ model_hindcast_S2 <- function(PARAMETER,
   #*********************************************************#
   #return target(GoF) for minimizing or
   #*return output database & GoF
-  if (OUTPUT == F) {
+  if (DB.OUTPUT == F) {
     return(GoF)
   } else
-    if (OUTPUT == T) {
+    if (DB.OUTPUT == T) {
       return(
         output = list(
           outDB = DB.updated,
