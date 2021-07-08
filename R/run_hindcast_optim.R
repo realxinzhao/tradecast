@@ -22,7 +22,16 @@ run_hindcast_optim <- function(PAR.START = c(1.46,1.50),
                                PGTOL = 0.0001,
                                MAXIT = 1000){
 
+  assertthat::assert_that(is.numeric(PAR.START))
+  assertthat::assert_that(is.function(FUN))
+  assertthat::assert_that(is.numeric(LOWER))
+  assertthat::assert_that(is.numeric(UPPER))
   assertthat::assert_that(is.logical(HESSIAN))
+  assertthat::assert_that(is.numeric(PGTOL))
+  assertthat::assert_that(is.numeric(MAXIT))
+  assertthat::assert_that(MAXIT%%1==0)
+  assertthat::assert_that(length(LOWER) == length(PAR.START))
+  assertthat::assert_that(length(UPPER) == length(PAR.START))
 
   #*********************************************************#
   start_time <- Sys.time()

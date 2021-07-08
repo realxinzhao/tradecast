@@ -15,6 +15,7 @@ dataproc_basedata <- function(){
   margin.mtax <- margin.reg.pim_pexp <- margin.reg.pim_pp <- pexp.reg <- pimp.reg <-
   pp <-reg <- reg.exp <- reg.imp <- region <- revenue <- value <- variable <- year <- NULL
 
+
   TradeGCAM <- readRDS(paste0(system.file("extdata", package = "tradecast", mustWork = T),
                               "/RDS/TradeGCAMmini.rds"))
   prodGCAM <- readRDS(paste0(system.file("extdata", package = "tradecast", mustWork = T),
