@@ -45,8 +45,8 @@ model_hindcast(PARAMETER = c(3,6),
                TARGETYEARS = seq(2000, 2015,5),
                BASEDATA.ALLYEARS = basedata.allyear)
 
-#E.g., try other set of parameters 1.46 and 1.5; Gof will be smaller
-model_hindcast(PARAMETER = c(1.46,1.50),
+#E.g., try other set of parameters 1.37 and 1.47; Gof will be smaller
+model_hindcast(PARAMETER = c(1.38,1.47),
                PARAMETER.EXPONENT = parameter.exponent,
                BASEYEAR = 1995,
                TARGETYEARS = seq(2000, 2015,5),
