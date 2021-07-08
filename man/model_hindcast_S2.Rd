@@ -17,6 +17,8 @@ model_hindcast_S2(
 \arguments{
 \item{PARAMETER}{A vector of parameters to optimize}
 
+\item{PARAMETER.EXPONENT}{A list of parameters used in initial calibration (e.g., CES and logit exponents)}
+
 \item{BASEYEAR}{A numeric value of base year}
 
 \item{TARGETYEARS}{A vector of target years}

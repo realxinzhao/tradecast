@@ -9,6 +9,7 @@
 #'
 #' @return The value of targeted error metric
 #' @import dplyr tidyr
+#' @importFrom assertthat assert_that
 #' @export
 
 output_metric <- function(DF, LOG.WEIGHT = F){

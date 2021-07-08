@@ -10,6 +10,7 @@
 #' @param PGTOL Tolerance in optim for the "L-BFGS-B" method
 #' @param MAXIT Number of max iteration in optim
 #' @importFrom stats optim
+#' @importFrom assertthat assert_that
 #' @return Solutions from the optimization
 #' @export
 

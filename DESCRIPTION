@@ -21,4 +21,5 @@ Imports:
     dplyr (>= 0.8.5),
     tidyr (>= 0.6.0),
     tibble (>= 1.1),
-    nleqslv (>= 3.3.2)
+    nleqslv (>= 3.3.2),
+    assertthat (>= 0.2.1)

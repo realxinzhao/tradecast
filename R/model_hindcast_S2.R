@@ -3,6 +3,7 @@
 #' model_hindcast_S2
 #' @description Generate the FUN (returning GoF) to be used in hindcast optimization for S2
 #' @param PARAMETER A vector of parameters to optimize
+#' @param PARAMETER.EXPONENT A list of parameters used in initial calibration (e.g., CES and logit exponents)
 #' @param BASEYEAR A numeric value of base year
 #' @param TARGETYEARS A vector of target years
 #' @param BASEDATA.ALLYEARS The dataframe returned from dataproc.basedata
