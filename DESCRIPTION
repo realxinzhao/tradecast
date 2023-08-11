@@ -1,9 +1,11 @@
 Package: tradecast
 Type: Package
 Title: Hindcast framework for validating an Armington-based agricultural trade model
-Version: 0.1.0
-Author: Xin Zhao <xin.zhao@pnnl.gov>
-        Kate Calvin <katherine.calvin@pnnl.gov>
+Version: 1.0
+Date: 2023-05-06
+Authors@R: c(person("Xin", "Zhao", email = "xin.zhao@pnnl.gov", role = c("cre", "aut"), comment = c(ORCID = "0000-0002-1801-4393")),
+            person("Kate", "Calvin", role = "aut"),
+            person("Pacific Northwest National Laboratory", role = "cph"))
 Maintainer: Xin Zhao <xin.zhao@pnnl.gov>
 Description: This R package provides a model framework validation framework, with 
     a focus on the agricultural trade modeling method used in GCAM. In particular,
