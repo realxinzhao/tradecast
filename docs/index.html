@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hindcast framework for validating an Armington-based agricultural trade model • tradecast</title>
+<title>validating trade integration in global agroeconomic and multisector dynamic modeling • tradecast</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Hindcast framework for validating an Armington-based agricultural trade model">
+<script src="pkgdown.js"></script><meta property="og:title" content="validating trade integration in global agroeconomic and multisector dynamic modeling">
 <meta property="og:description" content='This R package provides a model framework validation framework, with 
     a focus on the agricultural trade modeling method used in GCAM. In particular,
     it includes scripts for running a small-scale agricultural trade-focused partical 
@@ -28,7 +28,7 @@
     
 
     <div class="container template-home">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <header><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -39,14 +39,45 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">tradecast</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fas fa-book"></span>
+     
+    Vignettes
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/getting-started.html">Getting Started</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="reference/index.html">
+    <span class="fa fa-file-code-o"></span>
+     
+    Reference
+  </a>
+</li>
+<li>
+  <a href="articles/news.html">
+    <span class="fa fa-newspaper-o"></span>
+     
+    News
+  </a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
@@ -68,16 +99,33 @@
 <!-- badges: end -->
 <p>This package provides the modeling and results used in [The role of global agricultural market integration in multiregional economic modeling: using hindcast experiments to validate an Armington model]</p>
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+<h2 id="download-and-install">Download and install:<a class="anchor" aria-label="anchor" href="#download-and-install"></a>
 </h2>
-<p>You can install the released version of tradecast from :</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"tradecast"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"realxinzhao/tradecast"</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="user-guide">User Guide<a class="anchor" aria-label="anchor" href="#user-guide"></a>
+</h2>
+<p>The package is documented in the <a href="https://realxinzhao.github.io/tradecast/index.html">online manual</a></p>
 </div>
 <div class="section level2">
 <h2 id="abstract">Abstract<a class="anchor" aria-label="anchor" href="#abstract"></a>
 </h2>
 <p>The representations of international trade and global market integration play central roles in long-term global agricultural economic modeling. However, the conventional use of the gravity models (i.e., the Armington approach) of trade may not adequately account for the dynamic process of market integration. In this paper, we generalize a logit-based Armington approach by permitting home preference bias erosion to account for a trend of global market integration. We build a simple agricultural economic equilibrium model and conduct hindcast experiments to examine the historical trend of market integration. The results show a significant integrating trend of the global agricultural market implied by converging Armington preference distributions (i.e., home bias erosion) in 1995 – 2015, with a half-life of 45 years. We demonstrate important implications of allowing the dynamic trend of market integration implied by bias erosion on estimating trade elasticities. By testing the future market integration trend implied by historical home bias integration in GCAM, we show a high sensitivity of long-term agroeconomic projections to future trade and market integration scenarios.</p>
+</div>
+<div class="section level2">
+<h2 id="related-publications">Related publications<a class="anchor" aria-label="anchor" href="#related-publications"></a>
+</h2>
+<ul>
+<li>Calvin, Katherine V., Abigail Snyder, Xin Zhao, and Marshall Wise. “Modeling land use and land cover change: using a hindcast to estimate economic parameters in gcamland v2. 0.” Geoscientific Model Development 15, no. 2 (2022): 429-447. <a href="https://doi.org/10.5194/gmd-15-429-2022" class="external-link uri">https://doi.org/10.5194/gmd-15-429-2022</a>
+</li>
+<li>Yarlagadda, Brinda, Thomas Wild, Xin Zhao, Leon Clarke, Ryna Cui, Zarrar Khan, Abigail Birnbaum, and Jonathan Lamontagne. “Trade and Climate Mitigation Interactions Create Agro‐Economic Opportunities With Social and Environmental Trade‐Offs in Latin America and the Caribbean.” Earth’s Future 11, no. 4 (2023). <a href="https://doi.org/10.1029/2022EF003063" class="external-link uri">https://doi.org/10.1029/2022EF003063</a>
+</li>
+<li>Zhao, Xin, Katherine V. Calvin, Marshall A. Wise, and Gokul Iyer. “The role of global agricultural market integration in multiregional economic modeling: Using hindcast experiments to validate an Armington model.” Economic Analysis and Policy 72 (2021): 1-17. <a href="https://doi.org/10.1016/j.eap.2021.07.007" class="external-link uri">https://doi.org/10.1016/j.eap.2021.07.007</a>
+</li>
+</ul>
 </div>
 </div>
   </div>
@@ -90,13 +138,6 @@
 </ul>
 </div>
 
-
-<div class="citation">
-<h2 data-toc-skip>Citation</h2>
-<ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing tradecast</a></li>
-</ul>
-</div>
 
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>

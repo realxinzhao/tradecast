@@ -1,0 +1,64 @@
+url: https://realxinzhao.github.io/tradecast/
+
+home:
+  title: validating trade integration in global agroeconomic and multisector dynamic modeling 
+  sidebar:
+    structure: [links, license, community, authors, dev]
+
+
+development:
+  mode: auto
+
+
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Vignettes"
+      icon: fas fa-book
+      menu:
+        - text: "Getting Started"
+          href: articles/getting-started.html
+    - icon: fa-file-code-o
+      text: "Reference"
+      href: reference/index.html
+    - icon: fa-newspaper-o
+      text: "News"
+      href: articles/news.html
+
+
+      
+reference:
+  - title: Partial equilibrium model of agricultural trade
+  - contents:     
+      - minicam_agtrade
+  - title: Running tradecast
+  - contents:
+      - run_hindcast
+      - run_hindcast_optim
+      - run_hindcast_S2
+      - run_hindcast_S3
+  - title: Model and scenario configurations 
+    contents:
+      - basedata_year
+      - model_data
+      - model_shock
+      - model_shock_S2
+      - model_shock_S3
+      - model_solve
+      - model_hindcast
+      - model_hindcast_S2
+      - model_hindcast_S3
+      - model_proc_output
+      - output_metric
+  - title: Helper functions
+    contents: 
+      - pull_list
+      - MA.n
+      - logit.sw.cali
+      - logit.share
+      - dataproc_basedata
+      - dataproc.gtap
+      - cropbioshare
+      - ces.share      

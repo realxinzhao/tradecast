@@ -1,87 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/404.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/articles/getting-started.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/articles/index.html</loc>
   </url>
   <url>
-    <loc>/reference/basedata_year.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/articles/news.html</loc>
   </url>
   <url>
-    <loc>/reference/ces.share.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/authors.html</loc>
   </url>
   <url>
-    <loc>/reference/cropbioshare.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/index.html</loc>
   </url>
   <url>
-    <loc>/reference/dataproc.gtap.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/basedata_year.html</loc>
   </url>
   <url>
-    <loc>/reference/dataproc_basedata.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/ces.share.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/cropbioshare.html</loc>
   </url>
   <url>
-    <loc>/reference/logit.share.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/dataproc.gtap.html</loc>
   </url>
   <url>
-    <loc>/reference/logit.sw.cali.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/dataproc_basedata.html</loc>
   </url>
   <url>
-    <loc>/reference/MA.n.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/minicam_agtrade.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/logit.share.html</loc>
   </url>
   <url>
-    <loc>/reference/model_data.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/logit.sw.cali.html</loc>
   </url>
   <url>
-    <loc>/reference/model_hindcast.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/MA.n.html</loc>
   </url>
   <url>
-    <loc>/reference/model_hindcast_S2.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/minicam_agtrade.html</loc>
   </url>
   <url>
-    <loc>/reference/model_hindcast_S3.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_data.html</loc>
   </url>
   <url>
-    <loc>/reference/model_proc_output.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_hindcast.html</loc>
   </url>
   <url>
-    <loc>/reference/model_shock.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_hindcast_S2.html</loc>
   </url>
   <url>
-    <loc>/reference/model_shock_S2.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_hindcast_S3.html</loc>
   </url>
   <url>
-    <loc>/reference/model_shock_S3.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_proc_output.html</loc>
   </url>
   <url>
-    <loc>/reference/model_solve.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_shock.html</loc>
   </url>
   <url>
-    <loc>/reference/output_metric.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_shock_S2.html</loc>
   </url>
   <url>
-    <loc>/reference/pull_list.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_shock_S3.html</loc>
   </url>
   <url>
-    <loc>/reference/run_hindcast.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/model_solve.html</loc>
   </url>
   <url>
-    <loc>/reference/run_hindcast_optim.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/output_metric.html</loc>
   </url>
   <url>
-    <loc>/reference/run_hindcast_S2.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/pull_list.html</loc>
   </url>
   <url>
-    <loc>/reference/run_hindcast_S3.html</loc>
+    <loc>https://realxinzhao.github.io/tradecast/reference/run_hindcast.html</loc>
+  </url>
+  <url>
+    <loc>https://realxinzhao.github.io/tradecast/reference/run_hindcast_optim.html</loc>
+  </url>
+  <url>
+    <loc>https://realxinzhao.github.io/tradecast/reference/run_hindcast_S2.html</loc>
+  </url>
+  <url>
+    <loc>https://realxinzhao.github.io/tradecast/reference/run_hindcast_S3.html</loc>
   </url>
 </urlset>

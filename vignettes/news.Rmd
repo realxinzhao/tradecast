@@ -1,0 +1,27 @@
+---
+title: "news"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{news}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tradecast)
+```
+
+# tradecast 1.0.0
+
+**First release**
+The first release of tradecast 1.0.0 includes the data and code for replicating results shown in the journal article, Zhao et al. (2021), **The role of global agricultural market integration in multiregional economic modeling: Using hindcast experiments to validate an Armington model**, published in *Economic Analysis and Policy* [Link](https://www.sciencedirect.com/science/article/pii/S0313592621000990). 
+
+

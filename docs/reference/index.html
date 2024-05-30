@@ -6,7 +6,7 @@
     
 
     <div class="container template-reference-index">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <header><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -17,13 +17,42 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tradecast</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav"><li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="../index.html">
+    <span class="fa fa-home"></span>
+     
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fas fa-book"></span>
+     
+    Vignettes
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
+      <a href="../articles/getting-started.html">Getting Started</a>
+    </li>
+  </ul></li>
+<li>
+  <a href="../reference/index.html">
+    <span class="fa fa-file-code-o"></span>
+     
+    Reference
+  </a>
+</li>
+<li>
+  <a href="../articles/news.html">
+    <span class="fa fa-newspaper-o"></span>
+     
+    News
+  </a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"></ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -38,7 +67,35 @@
     </div>
 
     <table class="ref-index"><colgroup><col class="alias"><col class="title"></colgroup><tbody><tr><th colspan="2">
-          <h2 id="all-functions">All functions <a href="#all-functions" class="anchor" aria-hidden="true"></a></h2>
+          <h2 id="partial-equilibrium-model-of-agricultural-trade">Partial equilibrium model of agricultural trade <a href="#partial-equilibrium-model-of-agricultural-trade" class="anchor" aria-hidden="true"></a></h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr></tbody><tbody><tr><td>
+          <p><code><a href="minicam_agtrade.html">minicam_agtrade()</a></code> </p>
+        </td>
+        <td><p>Partial equilibrium agricultural economic modeling (minicam_agtrade)</p></td>
+      </tr></tbody><tbody><tr><th colspan="2">
+          <h2 id="running-tradecast">Running tradecast <a href="#running-tradecast" class="anchor" aria-hidden="true"></a></h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr></tbody><tbody><tr><td>
+          <p><code><a href="run_hindcast.html">run_hindcast()</a></code> </p>
+        </td>
+        <td><p>run_hindcast</p></td>
+      </tr><tr><td>
+          <p><code><a href="run_hindcast_optim.html">run_hindcast_optim()</a></code> </p>
+        </td>
+        <td><p>run_hindcast_optim</p></td>
+      </tr><tr><td>
+          <p><code><a href="run_hindcast_S2.html">run_hindcast_S2()</a></code> </p>
+        </td>
+        <td><p>run_hindcast_S2</p></td>
+      </tr><tr><td>
+          <p><code><a href="run_hindcast_S3.html">run_hindcast_S3()</a></code> </p>
+        </td>
+        <td><p>run_hindcast_S3</p></td>
+      </tr></tbody><tbody><tr><th colspan="2">
+          <h2 id="model-and-scenario-configurations">Model and scenario configurations <a href="#model-and-scenario-configurations" class="anchor" aria-hidden="true"></a></h2>
           <p class="section-desc"></p>
         </th>
       </tr></tbody><tbody><tr><td>
@@ -46,57 +103,9 @@
         </td>
         <td><p>basedata_year</p></td>
       </tr><tr><td>
-          <p><code><a href="ces.share.html">ces.share()</a></code> </p>
-        </td>
-        <td><p>ces.share</p></td>
-      </tr><tr><td>
-          <p><code><a href="cropbioshare.html">cropbioshare()</a></code> </p>
-        </td>
-        <td><p>dataproc.OECD_FAO</p></td>
-      </tr><tr><td>
-          <p><code><a href="dataproc.gtap.html">dataproc.gtap()</a></code> </p>
-        </td>
-        <td><p>dataproc.gtap</p></td>
-      </tr><tr><td>
-          <p><code><a href="dataproc_basedata.html">dataproc_basedata()</a></code> </p>
-        </td>
-        <td><p>dataproc_basedata</p></td>
-      </tr><tr><td>
-          <p><code><a href="logit.share.html">logit.share()</a></code> </p>
-        </td>
-        <td><p>logit.share</p></td>
-      </tr><tr><td>
-          <p><code><a href="logit.sw.cali.html">logit.sw.cali()</a></code> </p>
-        </td>
-        <td><p>logit.sw.cali</p></td>
-      </tr><tr><td>
-          <p><code><a href="MA.n.html">MA.n()</a></code> </p>
-        </td>
-        <td><p>Moving average</p></td>
-      </tr><tr><td>
-          <p><code><a href="minicam_agtrade.html">minicam_agtrade()</a></code> </p>
-        </td>
-        <td><p>Partial equilibrium agricultural economic modeling (minicam_agtrade)</p></td>
-      </tr><tr><td>
           <p><code><a href="model_data.html">model_data()</a></code> </p>
         </td>
         <td><p>model.data</p></td>
-      </tr><tr><td>
-          <p><code><a href="model_hindcast.html">model_hindcast()</a></code> </p>
-        </td>
-        <td><p>model_hindcast</p></td>
-      </tr><tr><td>
-          <p><code><a href="model_hindcast_S2.html">model_hindcast_S2()</a></code> </p>
-        </td>
-        <td><p>model_hindcast_S2</p></td>
-      </tr><tr><td>
-          <p><code><a href="model_hindcast_S3.html">model_hindcast_S3()</a></code> </p>
-        </td>
-        <td><p>model_hindcast_S3</p></td>
-      </tr><tr><td>
-          <p><code><a href="model_proc_output.html">model_proc_output()</a></code> </p>
-        </td>
-        <td><p>model.proc.output</p></td>
       </tr><tr><td>
           <p><code><a href="model_shock.html">model_shock()</a></code> </p>
         </td>
@@ -114,29 +123,61 @@
         </td>
         <td><p>model.solve</p></td>
       </tr><tr><td>
+          <p><code><a href="model_hindcast.html">model_hindcast()</a></code> </p>
+        </td>
+        <td><p>model_hindcast</p></td>
+      </tr><tr><td>
+          <p><code><a href="model_hindcast_S2.html">model_hindcast_S2()</a></code> </p>
+        </td>
+        <td><p>model_hindcast_S2</p></td>
+      </tr><tr><td>
+          <p><code><a href="model_hindcast_S3.html">model_hindcast_S3()</a></code> </p>
+        </td>
+        <td><p>model_hindcast_S3</p></td>
+      </tr><tr><td>
+          <p><code><a href="model_proc_output.html">model_proc_output()</a></code> </p>
+        </td>
+        <td><p>model.proc.output</p></td>
+      </tr><tr><td>
           <p><code><a href="output_metric.html">output_metric()</a></code> </p>
         </td>
         <td><p>output_metric</p></td>
-      </tr><tr><td>
+      </tr></tbody><tbody><tr><th colspan="2">
+          <h2 id="helper-functions">Helper functions <a href="#helper-functions" class="anchor" aria-hidden="true"></a></h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr></tbody><tbody><tr><td>
           <p><code><a href="pull_list.html">pull_list()</a></code> </p>
         </td>
         <td><p>pull_list</p></td>
       </tr><tr><td>
-          <p><code><a href="run_hindcast.html">run_hindcast()</a></code> </p>
+          <p><code><a href="MA.n.html">MA.n()</a></code> </p>
         </td>
-        <td><p>run_hindcast</p></td>
+        <td><p>Moving average</p></td>
       </tr><tr><td>
-          <p><code><a href="run_hindcast_optim.html">run_hindcast_optim()</a></code> </p>
+          <p><code><a href="logit.sw.cali.html">logit.sw.cali()</a></code> </p>
         </td>
-        <td><p>run_hindcast_optim</p></td>
+        <td><p>logit.sw.cali</p></td>
       </tr><tr><td>
-          <p><code><a href="run_hindcast_S2.html">run_hindcast_S2()</a></code> </p>
+          <p><code><a href="logit.share.html">logit.share()</a></code> </p>
         </td>
-        <td><p>run_hindcast_S2</p></td>
+        <td><p>logit.share</p></td>
       </tr><tr><td>
-          <p><code><a href="run_hindcast_S3.html">run_hindcast_S3()</a></code> </p>
+          <p><code><a href="dataproc_basedata.html">dataproc_basedata()</a></code> </p>
         </td>
-        <td><p>run_hindcast_S3</p></td>
+        <td><p>dataproc_basedata</p></td>
+      </tr><tr><td>
+          <p><code><a href="dataproc.gtap.html">dataproc.gtap()</a></code> </p>
+        </td>
+        <td><p>dataproc.gtap</p></td>
+      </tr><tr><td>
+          <p><code><a href="cropbioshare.html">cropbioshare()</a></code> </p>
+        </td>
+        <td><p>dataproc.OECD_FAO</p></td>
+      </tr><tr><td>
+          <p><code><a href="ces.share.html">ces.share()</a></code> </p>
+        </td>
+        <td><p>ces.share</p></td>
       </tr></tbody></table></div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

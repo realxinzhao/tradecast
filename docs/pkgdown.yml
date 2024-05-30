@@ -1,6 +1,11 @@
 pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
-articles: {}
-last_built: 2023-08-11T14:31Z
+articles:
+  getting-started: getting-started.html
+  news: news.html
+last_built: 2023-08-21T19:21Z
+urls:
+  reference: https://realxinzhao.github.io/tradecast/reference
+  article: https://realxinzhao.github.io/tradecast/articles
 
